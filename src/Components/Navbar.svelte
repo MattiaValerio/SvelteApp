@@ -5,6 +5,8 @@
 		{ name: 'About', url: '/about' },
 		{ name: 'Contact', url: '/contact' }
 	];
+
+	
 </script>
 
 <nav class="h-full w-full">
