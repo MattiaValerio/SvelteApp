@@ -1,0 +1,17 @@
+{
+    "short_name": "MattiaValerio",
+    "name": "MattiaValerio-portfolio",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "pwa-icon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "display": "standalone",
+    "scope": "/",
+    "color": "#000000",
+    "shortcuts": [],
+    "description": "Lofi to lofi beats, while using the scratchpad to list down tasks and thoughts"
+}

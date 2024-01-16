@@ -35,12 +35,17 @@
 		</div>
 	</div>
 
-	<div class=" flex flex-col items-center justify-center h-full bg-slate-500">
+	<div id="about" class="flex flex-col items-center justify-center h-full bg-slate-500">
 		<h1 class="text-6xl font-bold text-center text-slate-100">Lorem Ipsum</h1>
 		<h2 class="text-2xl font-bold text-center text-slate-100">Full Stack Developer</h2>
 	</div>
 
 	<div id="works-page" class="flex flex-col items-center justify-center h-full bg-slate-500">
+		<h1 class="text-6xl font-bold text-center text-slate-100">Lorem Ipsum</h1>
+		<h2 class="text-2xl font-bold text-center text-slate-100">Full Stack Developer</h2>
+	</div>
+
+	<div id="contacts" class=" flex flex-col items-center justify-center h-full bg-slate-500">
 		<h1 class="text-6xl font-bold text-center text-slate-100">Lorem Ipsum</h1>
 		<h2 class="text-2xl font-bold text-center text-slate-100">Full Stack Developer</h2>
 	</div>
