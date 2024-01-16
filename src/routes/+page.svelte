@@ -42,7 +42,7 @@
 
 	<div
 		id="works-page"
-		class="flex flex-col gap-4 items-center justify-around h-full w-full py-2 bg-slate-500"
+		class="flex flex-col gap-4 items-center justify-around h-full w-full py-2 bg-slate-500 overflow-y-auto"
 	>
 		<h1 class="text-6xl font-bold text-center text-slate-100">My works</h1>
 
@@ -87,14 +87,20 @@
 				</p>
 			</div>
 
-			<div class="flex border flex-col flex-shrink-0 w-full items-center justify-center gap-5">
+			<div
+				id="work-5"
+				class="flex border flex-col flex-shrink-0 w-full items-center justify-center gap-5"
+			>
 				<h2 class="text-2xl font-bold text-center text-slate-100">Lorem Ipsum</h2>
 				<p class="text-center text-slate-100">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
 				</p>
 			</div>
 
-			<div class="flex border flex-col items-center flex-shrink-0 w-full justify-center gap-5">
+			<div
+				id="work-6"
+				class="flex border flex-col items-center flex-shrink-0 w-full justify-center gap-5"
+			>
 				<h2 class="text-2xl font-bold text-center text-slate-100">Lorem Ipsum</h2>
 				<p class="text-center text-slate-100">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
