@@ -4,7 +4,7 @@
 	import Footer from '../Components/Footer.svelte';
 </script>
 
-<div class="h-full">
+<div class="h-full w-full">
 	<div class="bg-black fixed top-0 left-0 right-0 h-[70px]">
 		<Navbar />
 	</div>

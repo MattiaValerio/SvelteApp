@@ -13,7 +13,6 @@
 
 	function scrollTo(link: link) {
 		var elem = document.getElementById(link.url);
-
 		elem !== null ? elem.scrollIntoView({ block: 'end', behavior: 'smooth' }) : null;
 	}
 </script>
