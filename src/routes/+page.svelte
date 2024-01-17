@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import ConfirmPopup from '../Components/ConfirmSend.svelte';
 	let confirm = false;
 
@@ -8,19 +8,24 @@
 		elem !== null ? elem.scrollIntoView({ block: 'end', behavior: 'smooth' }) : null;
 	}
 
-	function scrolldiv2() {
-		var elem = document.getElementById('works-list');
+	let index = 0;
+	const changePosition = (pippo: "positive" | "negative") => {
+		if(pippo === "positive") index = index >=  6 ? 6 : index + 1;
+		if(pippo === "negative") index = index <= 0 ? 0 : index - 1;
 
-		if (elem !== null) {
-			var topPos = elem.offsetTop;
-			elem.scrollTo({
-				top: 0,
-				left: topPos,
-				behavior: 'smooth'
-			});
+		scrolldiv2();
+	};
 
-			console.log(elem.offsetTop);
-		}
+	 const scrolldiv2 = ()=>{
+		const elem = document.getElementById('works-list')!;
+
+		const width = elem.scrollWidth;
+		elem.scrollTo({
+			top: 0,
+			left: (width / 6) * index,
+			behavior: 'smooth'
+		});
+		
 	}
 </script>
 
@@ -65,17 +70,17 @@
 		class="flex flex-col gap-4 items-center justify-around h-full w-full py-2 bg-slate-500 overflow-y-auto"
 	>
 		<div class="w-full flex items-center justify-around">
-			<button class="border px-2 rounded-md font-bold text-slate-100">Left</button>
+			<button class="border px-2 rounded-md font-bold text-slate-100" on:click={() => changePosition('negative')}>Left</button>
 			<h1 class="text-4xl md:lg:text-6xl font-bold text-center text-slate-100">My works</h1>
-			<button class="border px-2 rounded-md font-bold text-slate-100" on:click={() => scrolldiv2()}
-				>Right</button
-			>
+			<button class="border px-2 rounded-md font-bold text-slate-100" on:click={() => changePosition('positive')}
+				>Right
+			</button>
 		</div>
 
 		<div id="works-list" class="flex overflow-x-scroll h-full w-full gap-10 p-3">
 			<div
 				id="work-1"
-				class="flex flex-shrink-0 flex-col items-center h-full w-full md:w-[45%] bg-slate-100 justify-center gap-5 rounded-md"
+				class="flex flex-shrink-0 flex-col items-center h-full w-full md:w-[50%] bg-slate-100 justify-center gap-5 rounded-md"
 			>
 				<h2 class="text-2xl font-bold text-center text-slate-700">Lorem Ipsum</h2>
 				<p class="text-center text-slate-700">
@@ -135,12 +140,12 @@
 		</div>
 	</div>
 
-	<div id="contacts" class=" flex flex-col items-center justify-center h-full bg-slate-500 gap-5">
+	<div id="contacts" class=" flex flex-col items-center justify-around h-full bg-slate-500 gap-5">
 		<h1 class="text-6xl font-bold text-center text-slate-100">Contact Me</h1>
-		<div class="flex flex-col gap-5 w-full px-3 justify-center">
-			<input type="text" placeholder="Name" class="px-2 py-1" />
-			<input type="text" placeholder="your@email.com" class="px-2 py-1" />
-			<textarea placeholder="Message" class="h-40 px-2 py-1" />
+		<div class="flex flex-col justify-around gap-5 border  w-full md:w-[60%] lg:w-[40%] px-3">
+			<input type="text" placeholder="Name" class="px-2 py-1 border rounded-md" />
+			<input type="text" placeholder="your@email.com" class="px-2 py-1 border rounded-md" />
+			<textarea placeholder="Message" class="h-40 px-2 py-1 border rounded-md" />
 			<div class="w-full flex justify-center">
 				<button
 					class="text-white py-3 border shadow-slate-700 shadow-xl flex justify-center gap-1 rounded-md w-[40%] font-bold"
